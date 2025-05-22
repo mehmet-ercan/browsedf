@@ -47,11 +47,11 @@ def convert_events_to_annotations(input_xml, output_file):
 
     tree = ET.ElementTree(annotationlist)
     with open(output_file, "wb") as f:
-        tree.write(f, encoding="iso-8859-1", xml_declaration=True)
+        tree.write(f, encoding="UTF-8", xml_declaration=True)
 
 
 # Example usage
-with open("dataset/label/169941.xml", "r", encoding="iso-8859-1") as file:
+with open("dataset/label/169941.xml", "r", encoding="UTF-8") as file:
     xml_content = file.read()
 
 output_file = "converted_annotations.xml"
